@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     public Button btn;
     public ArrayList<EditModel> editModelArrayList;
-    int populateListMaxNum = 3;
+    int populateListMaxNum = 50;
     int listNumber = populateListMaxNum;
     private ListView lv;
     private CustomeAdapter customeAdapter;
