@@ -2,6 +2,7 @@ package com.example.android.scoresorter;
 
 import android.content.Context;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,6 +70,9 @@ public class CustomeAdapter extends BaseAdapter {
         }
 
         holder.editText.setText(editModelArrayList.get(position).getEditTextValue());
+        //Setting input to decimal and its working!
+        holder.editText.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
 
         holder.editText.addTextChangedListener(new TextWatcher() {
             @Override
