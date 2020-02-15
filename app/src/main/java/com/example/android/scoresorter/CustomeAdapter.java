@@ -62,6 +62,8 @@ public class CustomeAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.lv_item, null, true);
 
             holder.editText = convertView.findViewById(R.id.editid);
+            //update
+            holder.textView = convertView.findViewById(R.id.edittext);
 
             convertView.setTag(holder);
         } else {
@@ -99,6 +101,7 @@ public class CustomeAdapter extends BaseAdapter {
 
     private class ViewHolder {
 
+        public View textView;
         protected EditText editText;
 
     }

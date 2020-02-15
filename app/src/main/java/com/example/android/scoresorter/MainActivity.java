@@ -19,13 +19,16 @@ public class MainActivity extends AppCompatActivity {
     private ListView lv;
     private CustomeAdapter customeAdapter;
 
+    //Data collection:
+    public ArrayList collectedData = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lv = (ListView) findViewById(R.id.listView);
-        btn = (Button) findViewById(R.id.btn);
+        lv = findViewById(R.id.listView);
+        btn = findViewById(R.id.btn);
 
         editModelArrayList = populateList();
         customeAdapter = new CustomeAdapter(this, editModelArrayList);
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //Data collection
 
 
     }
