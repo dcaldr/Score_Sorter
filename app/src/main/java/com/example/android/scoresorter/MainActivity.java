@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
+// my import
+
+
 public class MainActivity extends AppCompatActivity {
 
     public Button btn;
@@ -39,8 +42,11 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //addToList();
+                //addToList(); //not working
                 Toast.makeText(getApplicationContext(), "button", Toast.LENGTH_LONG).show();
+                //  TextView meta = editModelArrayList.get(1).;
+                //  meta.setText("Hello there");
+                editModelArrayList.get(2).setFinalScore(21);
 
             }
         });
