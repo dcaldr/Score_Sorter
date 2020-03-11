@@ -2,8 +2,8 @@ package com.example.android.scoresorter;
 
 public class EditModel {
     private String editTextValue;
-    private int finalScore;
-    private String finalScoreText;
+    private String finalScore;
+    private String finalScoreText = "Pořadí";
     //test TextView to list
 
     public String getEditTextValue() {
@@ -18,12 +18,15 @@ public class EditModel {
     //moving from int to String
 
     public String getFinalScore() {
-        if (finalScore != 0) return finalScoreText = Integer.toString(finalScore);
-        else return finalScoreText = "Pořadí:";
+
+        // if (finalScore != 0) return finalScoreText = Integer.toString(finalScore);
+        // else return finalScoreText = "Pořadí:";
+        return finalScoreText;
     }
 
-    public void setFinalScore(int finalScore) {
+    public void setFinalScore(String finalScore) {
         this.finalScore = finalScore;
+
     }
 }
 

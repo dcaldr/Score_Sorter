@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,13 +39,16 @@ public class MainActivity extends AppCompatActivity {
         /* TODO activate button */
 
         btn.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
-                //addToList(); //not working
-                Toast.makeText(getApplicationContext(), "button", Toast.LENGTH_LONG).show();
+
+                //Toast.makeText(getApplicationContext(), "button", Toast.LENGTH_LONG).show();
                 //  TextView meta = editModelArrayList.get(1).;
                 //  meta.setText("Hello there");
-                editModelArrayList.get(2).setFinalScore(21);
+                //editModelArrayList.get(2).setFinalScore(21);
+
 
             }
         });
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
     private ArrayList<EditModel> populateList() { //this part works perfectly
 

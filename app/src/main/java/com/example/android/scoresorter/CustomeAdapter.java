@@ -76,11 +76,11 @@ public class CustomeAdapter extends BaseAdapter {
         //my
         //View thatView = holder.textView; //wrong
         TextView thatView = convertView.findViewById(R.id.textview);
-        /** int toprint = editModelArrayList.get(position).getFinalScore();
-         String convert_toprint = Integer.toString(toprint);
+        /** int toPrint = editModelArrayList.get(position).getFinalScore();
+         String convert_toprint = Integer.toString(toPrint);
          thatView.setText(convert_toprint); */
-        String toprint = editModelArrayList.get(position).getFinalScore();
-        thatView.setText(toprint);
+        String toPrint = editModelArrayList.get(position).getFinalScore();
+        thatView.setText(toPrint);
 
 
 
@@ -121,10 +121,7 @@ public class CustomeAdapter extends BaseAdapter {
 
     }
 
-    private class ViewHolder1 {
 
-
-    }
 }
 
 
