@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -55,6 +56,7 @@ public class CustomeAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         final ViewHolder holder;
 
+
         if (convertView == null) {
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context
@@ -62,6 +64,8 @@ public class CustomeAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.lv_item, null, true);
 
             holder.editText = convertView.findViewById(R.id.editid);
+            holder.textView = convertView.findViewById(R.id.TextViewId);
+
 
             convertView.setTag(holder);
         } else {
@@ -70,6 +74,9 @@ public class CustomeAdapter extends BaseAdapter {
         }
 
         holder.editText.setText(editModelArrayList.get(position).getEditTextValue());
+        //TODO:repair this mistake
+        holder.textView.setText(editModelArrayList.get(position).getResultOrder());
+
         //Setting input to decimal and its working!
         holder.editText.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
@@ -100,8 +107,11 @@ public class CustomeAdapter extends BaseAdapter {
     private class ViewHolder {
 
         protected EditText editText;
+        //my
+        protected TextView textView;
 
     }
+
 
 }
 
