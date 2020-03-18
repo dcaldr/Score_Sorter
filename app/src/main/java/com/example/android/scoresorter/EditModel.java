@@ -14,8 +14,8 @@ public class EditModel {
     }
 
     public String  getResultOrder() {
-        if (resultOrder < 0) {
-            return String.valueOf(resultOrder);
+        if (this.resultOrder < 0) {
+            return String.valueOf(this.resultOrder);
         } else {
             return "";
         }
