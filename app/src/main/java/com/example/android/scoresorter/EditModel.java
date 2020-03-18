@@ -3,6 +3,7 @@ package com.example.android.scoresorter;
 public class EditModel {
     private String editTextValue;
     private int resultOrder;
+   public int intResultOrder;
 
     public String getEditTextValue() {
         return editTextValue;
@@ -19,7 +20,7 @@ public class EditModel {
             return "";
         }
     }
-        public void setResultOrder ( int intResultOrder){
+        public  void setResultOrder (int intResultOrder){
             this.resultOrder = intResultOrder;
 
         }
