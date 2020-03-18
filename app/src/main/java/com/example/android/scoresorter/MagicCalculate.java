@@ -19,11 +19,19 @@ public class MagicCalculate {
         Float inputValue;
         /* from @EditText (s) to ArrayList */
         for (int i = 0; i < CustomeAdapter.editModelArrayList.size(); i++) {
+            try {
+                if (editModelArrayList.get(i).getEditTextValue().length() > 0) {
+
+                    inputValue = Float.valueOf(editModelArrayList.get(i).getEditTextValue());
+                    inputHolder.add(inputValue);
+                } else {
+                    inputHolder.add((float) -1);
+                }
 
 
-            inputValue = Float.valueOf(editModelArrayList.get(i).getEditTextValue());
-            inputHolder.add(inputValue);
-
+            } catch (NullPointerException e) {
+                inputHolder.add((float) -1);
+            }
         }
         /* Copy list ArrayList for lookup and remove data from unused @EditText
          */
@@ -57,6 +65,9 @@ public class MagicCalculate {
     }
         private void sortArrayList () {
         Collections.sort(inputCompare);
+    }
+    public void resetTheAdapter(){
+
     }
         /*Return to @EditModel => -1 if from unused @EditText or invalid data order */
 //private void returnOrder(){

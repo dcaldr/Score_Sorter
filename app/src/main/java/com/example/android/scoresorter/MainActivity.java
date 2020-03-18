@@ -17,33 +17,41 @@ public class MainActivity extends AppCompatActivity {
     int populateListMaxNum = 50;
     int listNumber = populateListMaxNum;
     private ListView lv;
-    private CustomeAdapter customeAdapter;
+    public CustomeAdapter customeAdapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
         lv = (ListView) findViewById(R.id.listView);
         btn = (Button) findViewById(R.id.btn);
 
-        editModelArrayList = populateList();
-        customeAdapter = new CustomeAdapter(this, editModelArrayList);
-        lv.setAdapter(customeAdapter);
 
-        /* TODO activate button */
+                editModelArrayList = populateList();
+
+            AdapterReset();
+               /* TODO activate button */
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //addToList();
+                NonStaticMethodtoStaticContext.MagicCalculator();
                 Toast.makeText(getApplicationContext(), "button", Toast.LENGTH_LONG).show();
+
 
             }
         });
 
 
     }
+
+    public  void AdapterReset (){
+        customeAdapter = new CustomeAdapter(this, editModelArrayList);
+        lv.setAdapter(customeAdapter);}
 
     private ArrayList<EditModel> populateList() { //this part works perfectly
 
