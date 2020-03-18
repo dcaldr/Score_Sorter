@@ -57,6 +57,7 @@ public class CustomeAdapter extends BaseAdapter {
         final ViewHolder holder;
 
 
+
         if (convertView == null) {
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context

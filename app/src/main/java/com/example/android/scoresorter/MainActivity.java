@@ -41,6 +41,12 @@ final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
                 //addToList();
                 NonStaticMethodtoStaticContext.MagicCalculator();
                 Toast.makeText(getApplicationContext(), "button", Toast.LENGTH_LONG).show();
+                customeAdapter = null;
+
+                Toast.makeText(getApplicationContext(), "button1", Toast.LENGTH_LONG).show();
+                AdapterReset();
+                customeAdapter.notifyDataSetChanged();
+                Toast.makeText(getApplicationContext(), "button2", Toast.LENGTH_LONG).show();
 
 
             }
@@ -49,7 +55,7 @@ final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
 
     }
 
-    public  void AdapterReset (){
+    public void AdapterReset(){
         customeAdapter = new CustomeAdapter(this, editModelArrayList);
         lv.setAdapter(customeAdapter);}
 

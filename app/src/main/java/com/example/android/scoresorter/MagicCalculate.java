@@ -66,9 +66,7 @@ public class MagicCalculate {
         private void sortArrayList () {
         Collections.sort(inputCompare);
     }
-    public void resetTheAdapter(){
 
-    }
         /*Return to @EditModel => -1 if from unused @EditText or invalid data order */
 //private void returnOrder(){
 
