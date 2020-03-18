@@ -38,7 +38,7 @@ public class MagicCalculate {
         /* Order lookup @inputCompare from high to low FUTURE:add switch */
         sortArrayList();
 
-        /*looking up values of first ArrayList */
+        /*looking up values of first ArrayList */ /* FUTURE:  encapsulate in method */
         Float lookupValue;
         int order;
         for (int i = 0; i < CustomeAdapter.editModelArrayList.size(); i++) {
