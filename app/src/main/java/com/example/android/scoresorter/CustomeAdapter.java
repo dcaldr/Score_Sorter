@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class CustomeAdapter extends BaseAdapter {
 
 
-    public static ArrayList<EditModel> editModelArrayList;
+    public static ArrayList<EditModel> editModelArrayList/*this*/;
     private Context context;
 
     public CustomeAdapter(Context context, ArrayList<EditModel> editModelArrayList) {
@@ -66,7 +66,10 @@ public class CustomeAdapter extends BaseAdapter {
 
             holder.editText = convertView.findViewById(R.id.editid);
             holder.textView = convertView.findViewById(R.id.TextViewId);
-
+//my
+            TextView thatView = convertView.findViewById(R.id.TextViewId);
+            String toPrint = editModelArrayList.get(position).getResultOrder();
+            thatView.setText(toPrint);
 
             convertView.setTag(holder);
         } else {
@@ -105,7 +108,7 @@ public class CustomeAdapter extends BaseAdapter {
         return convertView;
     }
 
-    private class ViewHolder {
+    public class ViewHolder {
 
         protected EditText editText;
         //my
