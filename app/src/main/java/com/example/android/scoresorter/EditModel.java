@@ -25,6 +25,7 @@ public class EditModel {
         }
 public String CalculateResultOrder() {
     if (this.intResultOrder > 0) {
+
         getStringResultOrder = String.valueOf(this.intResultOrder);
         return getStringResultOrder;
     } else {

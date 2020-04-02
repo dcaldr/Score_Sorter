@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
-        lv = (ListView) findViewById(R.id.listView);
-        btn = (Button) findViewById(R.id.btn);
+        lv = findViewById(R.id.listView);
+        btn = findViewById(R.id.btn);
 
 
                 editModelArrayList = populateList();
@@ -38,19 +37,13 @@ final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //addToList();
-                NonStaticMethodtoStaticContext.MagicCalculator();
-                Toast.makeText(getApplicationContext(), "button", Toast.LENGTH_LONG).show();
-               // customeAdapter = null;
 
-                Toast.makeText(getApplicationContext(), "button1", Toast.LENGTH_LONG).show();
+                // NonStaticMethodtoStaticContext.MagicWipe(); //doesn't do anything
+                //   customeAdapter.notifyDataSetChanged();
+                NonStaticMethodtoStaticContext.MagicCalculator();
+
 
                 customeAdapter.notifyDataSetChanged();
-               // AdapterResetOrStart();
-                Toast.makeText(getApplicationContext(), "button2", Toast.LENGTH_LONG).show();
-
-
-
 
 
             }

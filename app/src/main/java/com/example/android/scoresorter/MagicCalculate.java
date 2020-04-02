@@ -7,18 +7,16 @@ import static com.example.android.scoresorter.CustomeAdapter.editModelArrayList;
 
 
 public class MagicCalculate {
-    private ArrayList<Float> inputHolder = new ArrayList<Float>();
-    private ArrayList<Float> inputCompare = new ArrayList<Float>();
-    private ArrayList<Float> inputCompared = new ArrayList<Float>();
-    Float lookupValue;
-    int order;
-
-
+    ArrayList<Float> inputCompare = new ArrayList<Float>();
 
         public void MagicCalculator () {
+            int order;
+            Float lookupValue;
+            ArrayList<Float> inputHolder = new ArrayList<Float>();
 
 
-        Float inputValue;
+            MagicWipe();
+            Float inputValue;
         /* from @EditText (s) to ArrayList */
         for (int i = 0; i < editModelArrayList.size(); i++) {
             try {
@@ -59,7 +57,7 @@ public class MagicCalculate {
             order = 0;
             if (lookupValue > 0.0001) {
                 //+1 to not start with 0
-                order = inputCompare.indexOf(lookupValue);
+                order = inputCompare.indexOf(lookupValue) + 1;
 
                 //non-static method cannot be referenced from static context
                 /**
@@ -79,8 +77,7 @@ public class MagicCalculate {
             }
 
 
-            ;
-            }
+        }
 
 
         }
@@ -90,7 +87,7 @@ public class MagicCalculate {
 
         private void sortArrayList () {
       Collections.sort(inputCompare);
-            inputCompared.addAll(inputCompare);
+
 
     }
 
@@ -99,8 +96,9 @@ public class MagicCalculate {
 
 //}
 public void MagicWipe(){
+    inputCompare.clear();
     for (int i =0; i < editModelArrayList.size(); i++){
-        editModelArrayList.get(i).setResultOrder(0);
+        editModelArrayList.get(i).setResultOrder(-1);
     }
     }
 }
