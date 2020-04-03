@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,37 +12,49 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     public Button btn;
-    public ArrayList<EditModel> editModelArrayList;
-    int populateListMaxNum = 50;
+    public static ArrayList<EditModel> editModelArrayList;
+    int populateListMaxNum = 3;
     int listNumber = populateListMaxNum;
     private ListView lv;
-    private CustomeAdapter customeAdapter;
+    public  CustomeAdapter customeAdapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
+        lv = findViewById(R.id.listView);
+        btn = findViewById(R.id.btn);
 
-        lv = (ListView) findViewById(R.id.listView);
-        btn = (Button) findViewById(R.id.btn);
 
-        editModelArrayList = populateList();
-        customeAdapter = new CustomeAdapter(this, editModelArrayList);
-        lv.setAdapter(customeAdapter);
+                editModelArrayList = populateList();
 
-        /* TODO activate button */
+            AdapterResetOrStart();
+               /* TODO activate button */
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //addToList();
-                Toast.makeText(getApplicationContext(), "button", Toast.LENGTH_LONG).show();
+
+                // NonStaticMethodtoStaticContext.MagicWipe(); //doesn't do anything
+                //   customeAdapter.notifyDataSetChanged();
+                NonStaticMethodtoStaticContext.MagicCalculator();
+
+
+                customeAdapter.notifyDataSetChanged();
+
 
             }
         });
 
 
     }
+
+    public void AdapterResetOrStart(){
+        customeAdapter = new CustomeAdapter(this, editModelArrayList);
+        lv.setAdapter(customeAdapter);}
 
     private ArrayList<EditModel> populateList() { //this part works perfectly
 
