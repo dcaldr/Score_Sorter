@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,13 +13,13 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     public Button infoBtn;
     public Button btn;
+    public static boolean highToLow;
+    public Switch switchOrder;
     public static ArrayList<EditModel> editModelArrayList;
     int populateListMaxNum = 3;
     int listNumber = populateListMaxNum;
     private ListView lv;
     public  CustomeAdapter customeAdapter;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +29,18 @@ public class MainActivity extends AppCompatActivity {
         lv = findViewById(R.id.listView);
         btn = findViewById(R.id.btn);
         infoBtn = findViewById(R.id.InfoButton);
+        switchOrder = findViewById(R.id.order_switch);
 
 
                 editModelArrayList = populateList();
 
             AdapterResetOrStart();
                /* TODO activate button */
-
+/** Calculate Button*/
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                highToLow = switchOrder.isChecked();
 
                 NonStaticMethodtoStaticContext.MagicCalculator();
 
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /** Info button*/
         infoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick( View v ) {

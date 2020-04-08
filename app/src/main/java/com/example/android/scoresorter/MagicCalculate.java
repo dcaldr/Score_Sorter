@@ -89,11 +89,16 @@ public class MagicCalculate {
 
 
         private void sortArrayList () {
-      Collections.sort(inputCompare);
+            if (MainActivity.highToLow == false) {
+                //low to high
+                Collections.sort(inputCompare);
 
 
-    }
+            } else {
+                Collections.sort(inputCompare, Collections.<Float>reverseOrder());
 
+            }
+        }
         /*Return to @EditModel => -1 if from unused @EditText or invalid data order */
 //private void returnOrder(){
 
