@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis risus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Quisque porta. Phasellus rhoncus. Nulla non arcu lacinia neque faucibus fringilla. Duis viverra diam non justo. Maecenas aliquet accumsan leo. In dapibus augue non sapien. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Aliquam erat volutpat." />
+</RelativeLayout>

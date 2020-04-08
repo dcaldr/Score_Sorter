@@ -40,10 +40,13 @@ public class MagicCalculate {
             if (inputValue == null){
                 return;
             }
-            else if (inputValue > 0.0001) {
+            if (inputValue > 0.0001) {
                 inputCompare.add(inputValue);
 
-            } else return;
+            } else if (inputValue == -1.0) {
+
+            }
+            //  else return;
 
         }
         /* Order lookup @inputCompare from high to low FUTURE:add switch */

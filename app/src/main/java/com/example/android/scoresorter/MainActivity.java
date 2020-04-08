@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    public Button infoBtn;
     public Button btn;
     public static ArrayList<EditModel> editModelArrayList;
     int populateListMaxNum = 3;
@@ -24,9 +24,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
+        final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
         lv = findViewById(R.id.listView);
         btn = findViewById(R.id.btn);
+        infoBtn = findViewById(R.id.InfoButton);
 
 
                 editModelArrayList = populateList();
@@ -38,8 +39,6 @@ final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
             @Override
             public void onClick(View view) {
 
-                // NonStaticMethodtoStaticContext.MagicWipe(); //doesn't do anything
-                //   customeAdapter.notifyDataSetChanged();
                 NonStaticMethodtoStaticContext.MagicCalculator();
 
 
@@ -48,7 +47,13 @@ final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
 
             }
         });
+        infoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick( View v ) {
+                openInfoDialog();
 
+            }
+        });
 
     }
 
@@ -69,15 +74,10 @@ final MagicCalculate NonStaticMethodtoStaticContext = new MagicCalculate();
         return list;
     }
     /*TODO make it work = expand */
-
-   /* private void addToList() {  // this part doesn't work nor it doesn't fail
-
-        EditModel editModel = new EditModel();
-
-        editModelArrayList.add(editModel);
-        customeAdapter.notifyDataSetChanged();
-
-    }*/
+    public void openInfoDialog() {
+        InfoDialog infoDialog = new InfoDialog();
+        infoDialog.show(getSupportFragmentManager(), "info dialog");
+    }
 
 }
 
