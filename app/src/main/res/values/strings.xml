@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Score Sorter</string>
+    <string name="firstResultTextVal">result:</string>
+    <string name="infoText">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis risus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Quisque porta. Phasellus rhoncus. Nulla non arcu lacinia neque faucibus fringilla. Duis viverra diam non justo. Maecenas aliquet accumsan leo. In dapibus augue non sapien. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Aliquam erat volutpat.</string>
+    <string name="calculateButton">Calculate</string>
 </resources>

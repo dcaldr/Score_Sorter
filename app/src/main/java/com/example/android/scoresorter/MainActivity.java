@@ -1,5 +1,6 @@
 package com.example.android.scoresorter;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,15 +12,45 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    public static boolean highToLow;
+    public static ArrayList<EditModel> editModelArrayList;
+    //my
+    private static Context mContext;
     public Button infoBtn;
     public Button btn;
-    public static boolean highToLow;
     public Switch switchOrder;
-    public static ArrayList<EditModel> editModelArrayList;
+    public CustomeAdapter customeAdapter;
     int populateListMaxNum = 3;
     int listNumber = populateListMaxNum;
     private ListView lv;
-    public  CustomeAdapter customeAdapter;
+
+    public static Context getContext() {
+        return mContext;
+    }
+
+    public void AdapterResetOrStart() {
+        customeAdapter = new CustomeAdapter(this, editModelArrayList);
+        lv.setAdapter(customeAdapter);
+    }
+
+    private ArrayList<EditModel> populateList() { //this part works perfectly
+
+        ArrayList<EditModel> list = new ArrayList<>();
+
+        for (int i = 0; i < populateListMaxNum; i++) {
+            EditModel editModel = new EditModel();
+            //editModel.setEditTextValue(String.valueOf(i));
+            list.add(editModel);
+        }
+
+        return list;
+    }
+
+
+    public void openInfoDialog() {
+        InfoDialog infoDialog = new InfoDialog();
+        infoDialog.show(getSupportFragmentManager(), "info dialog");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
         infoBtn = findViewById(R.id.InfoButton);
         switchOrder = findViewById(R.id.order_switch);
+        mContext = this;
 
 
                 editModelArrayList = populateList();
@@ -60,28 +92,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    public void AdapterResetOrStart(){
-        customeAdapter = new CustomeAdapter(this, editModelArrayList);
-        lv.setAdapter(customeAdapter);}
-
-    private ArrayList<EditModel> populateList() { //this part works perfectly
-
-        ArrayList<EditModel> list = new ArrayList<>();
-
-        for (int i = 0; i < populateListMaxNum; i++) {
-            EditModel editModel = new EditModel();
-            //editModel.setEditTextValue(String.valueOf(i));
-            list.add(editModel);
-        }
-
-        return list;
-    }
-    /*TODO make it work = expand */
-    public void openInfoDialog() {
-        InfoDialog infoDialog = new InfoDialog();
-        infoDialog.show(getSupportFragmentManager(), "info dialog");
-    }
-
 }
 
