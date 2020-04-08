@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Score Sorter</string>
+    <string name="firstResultTextVal">Pořadí:</string>
+    <string name="calculateButton">Seřadit</string>
+    <string name="infoText">Hlavní myšlenkou této aplikace je jednoduché a rychlé  seřazení sportovních výsledků např. skok daleký: \nJan (první řádek) 3.98m ->2. \nTomáš 4.35m->1. \nZuzana  2.90m->3.\n Prosím používejte aplikaci pouze pro seřazení výsledků a ne jako jedinnou formu záznamu výskledků (pro případ vybití baterie, deště, chyby apliakce...)</string>
+</resources>

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     public static boolean highToLow;
     public static ArrayList<EditModel> editModelArrayList;
-    //my
+
     private static Context mContext;
     public Button infoBtn;
     public Button btn;
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
             AdapterResetOrStart();
                /* TODO activate button */
-/** Calculate Button*/
+        /** Calculate Button*/
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
