@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public Button btn;
     public Switch switchOrder;
     public CustomeAdapter customeAdapter;
-    int populateListMaxNum = 3;
+    int populateListMaxNum = 50;
     int listNumber = populateListMaxNum;
     private ListView lv;
 

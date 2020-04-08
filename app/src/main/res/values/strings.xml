@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Score Sorter</string>
     <string name="firstResultTextVal">result:</string>
-    <string name="infoText">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis risus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Quisque porta. Phasellus rhoncus. Nulla non arcu lacinia neque faucibus fringilla. Duis viverra diam non justo. Maecenas aliquet accumsan leo. In dapibus augue non sapien. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Aliquam erat volutpat.</string>
     <string name="calculateButton">Calculate</string>
+    <string name="infoText">Main purpose of this app is to easily calculate results, for example if you have a table of people and their sport results and you need quick calculation what their position is exam. in jumps : \nAlice 3.98 m -> 2.\nBob 4.35 m -> 1.\nCharlie 3.90 m -> 3.\nIt is easier and faster than calculating it by yourself. Please use this app only as calculator not and have the results stored elsewhere (in case of dead battery, sudden rain...) \nThank You</string>
 </resources>
