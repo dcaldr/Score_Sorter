@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:elevation="@dimen/cardview_default_elevation"
     android:orientation="vertical">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,23 +16,28 @@
             android:id="@+id/TextViewId"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:text="TextView:"
 
-            android:textColor="#000"
+
             tools:ignore="Suspicious0dp" />
 
         <EditText
             android:id="@+id/editid"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
             android:gravity="end"
             android:paddingLeft="10dp"
             android:paddingRight="20dp"
+
             android:text="hello"
-            android:textColor="#000"
 
 
             />
@@ -41,7 +48,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorAccent" />
+        android:layout_marginTop="2dp"
+        android:background="@color/design_default_color_primary_dark" />
 
 </LinearLayout>
