@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace 'com.aliencookies.android.scoresorter'
+    namespace 'com.example.android.scoresorter'
     compileSdk 34
 
     defaultConfig {
