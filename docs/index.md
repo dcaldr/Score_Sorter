@@ -1,12 +1,11 @@
-# Score Sorter - Privacy Policy
+# Score Sorter
 
-Welcome to the Score Sorter app privacy information page.
+A simple scoring application for your device.
 
-## Available Languages
+## Privacy
 
-- [English Privacy Policy](privacy-policy-en.html)
-- [Zásady ochrany osobních údajů (Česky)](privacy-policy-cs.html)
+View our [Privacy Policy](privacy.html) (available in English & Czech)
 
 ---
 
-**Score Sorter** is a simple scoring application designed to work efficiently on your device with complete privacy protection. This app does not collect, store, or transmit any personal data.
+**Score Sorter** works entirely on your device with complete privacy protection. No data is collected, stored, or transmitted.
