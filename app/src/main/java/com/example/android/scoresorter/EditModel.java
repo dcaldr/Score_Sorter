@@ -4,7 +4,8 @@ public class EditModel {
     private String editTextValue;
     public int resultOrder;
    public int intResultOrder;
-   public String getStringResultOrder ="ja ja";
+    public String getStringResultOrder = MainActivity.getContext().getString(R.string.firstResultTextVal);
+
 
     public String getEditTextValue() {
         return editTextValue;

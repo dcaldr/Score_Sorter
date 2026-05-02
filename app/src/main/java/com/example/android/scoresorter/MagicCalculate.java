@@ -40,10 +40,13 @@ public class MagicCalculate {
             if (inputValue == null){
                 return;
             }
-            else if (inputValue > 0.0001) {
+            if (inputValue > 0.0001) {
                 inputCompare.add(inputValue);
 
-            } else return;
+            } else if (inputValue == -1.0) {
+
+            }
+            //  else return;
 
         }
         /* Order lookup @inputCompare from high to low FUTURE:add switch */
@@ -86,11 +89,16 @@ public class MagicCalculate {
 
 
         private void sortArrayList () {
-      Collections.sort(inputCompare);
+            if (MainActivity.highToLow == false) {
+                //low to high
+                Collections.sort(inputCompare);
 
 
-    }
+            } else {
+                Collections.sort(inputCompare, Collections.<Float>reverseOrder());
 
+            }
+        }
         /*Return to @EditModel => -1 if from unused @EditText or invalid data order */
 //private void returnOrder(){
 

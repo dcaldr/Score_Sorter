@@ -1,14 +1,18 @@
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+/.idea/
 .DS_Store
-/build
-/captures
+.build
+.captures
 .externalNativeBuild
 .cxx
+# Ignore everything in app/release/ except .aab files (allow AAB uploads)
+app/release/*
+!app/release/*.aab
+# Keep keystore and other sensitive files ignored
+app/release/*.jks
+app/release/*.keystore
+app/release/*.p12
+app/release/*.pfx
+app/release/*.pem
